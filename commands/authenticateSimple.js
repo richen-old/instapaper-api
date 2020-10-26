@@ -7,7 +7,7 @@ console.log(`username: ${username}`)
 console.log(`password: ${password}`)
 
 const run = async () =>  {
-    await perform.getData(`https://www.instapaper.com/api/authenticate`, {username: username, password: password})
+    await perform.getData(`https://www.instapaper.com/api/authenticate?username=${username}&password=${password}`, {})
     .then(data => {
         console.log(data)
     });
